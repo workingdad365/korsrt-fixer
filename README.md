@@ -7,16 +7,10 @@
 
 ## 설치
 
-### pipx를 통한 설치 (권장)
-
 ```bash
-pipx install korsrt-fixer
-```
-
-### pip를 통한 설치
-
-```bash
-pip install korsrt-fixer
+git clone https://github.com/your-username/korsrt-fixer.git
+cd korsrt-fixer
+pip install -e .
 ```
 
 ## 설정
@@ -45,24 +39,16 @@ korsrt-fixer <입력.srt>
 
 - 변환 결과는 `<입력>_fixed.srt` 파일로 저장된다.
 
-## 개발자 가이드
+## 개발 환경
 
-### 개발 환경 설정
+uv를 사용한 개발 환경 구축:
 
 ```bash
-git clone https://github.com/your-username/korsrt-fixer.git
-cd korsrt-fixer
 uv sync
 ```
 
-### 개발 중 실행
+개발 중 실행:
 
 ```bash
 uv run fixer.py <입력.srt>
-```
-
-또는
-
-```bash
-uv run korsrt-fixer <입력.srt>
 ```
